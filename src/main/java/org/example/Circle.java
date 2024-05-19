@@ -3,7 +3,7 @@ package org.example;
 import java.nio.file.Path;
 
 public class Circle extends Shape {
-    private final int radius;
+    private int radius;
 
     public Circle(int radius) {
         this.radius = radius;
@@ -12,8 +12,19 @@ public class Circle extends Shape {
     @Override
     public void print() {
 
+
         System.out.println("Shape: circle");
         System.out.println("Radius: " + radius);
+
+        try {
+            if (radius > 100) {
+                throw new RuntimeException("Radius is too big! I cannot draw it here!");
+            }
+        } catch (RuntimeException ex) {
+            System.out.println(ex.getMessage());
+            return;
+        }
+
 
         // draw circle
         int width = radius;
