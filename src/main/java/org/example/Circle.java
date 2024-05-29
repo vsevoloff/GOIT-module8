@@ -10,6 +10,7 @@ public class Circle extends Shape {
             throw new IllegalArgumentException("Radius cannot be 0");
         }
         this.radius = radius;
+        square = radius*radius*3.141592654;
     }
 
     @Override

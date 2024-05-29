@@ -8,6 +8,7 @@ public class Triangle extends  Shape{
             throw  new IllegalArgumentException("Side cannot be <= 0");
         }
         this.side = side;
+        square = (side*side*Math.sqrt(3))/4;
     }
 
     @Override

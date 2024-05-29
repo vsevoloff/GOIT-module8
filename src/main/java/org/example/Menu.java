@@ -4,14 +4,13 @@ import java.awt.desktop.SystemSleepEvent;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Menu implements  Runnable{
+public class Menu {
 
     Shape shape;
 
     private byte choice = 1;
     private static Scanner scanner = new Scanner(System.in);
 
-    @Override
     public void run() {
         while (choice != 0) {
 
@@ -84,6 +83,7 @@ public class Menu implements  Runnable{
     }
 
     private static void print(Shape shape) {
+        System.out.println("Square: " + shape.getSquare());
         shape.print();
         System.out.println("\n< Press Any Key >");
         scanner.nextLine();

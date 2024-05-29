@@ -18,13 +18,14 @@ public class Trapezoid  extends  Shape{
           this.height = height;
           this.basis = basis;
           this.basis2 = basis2;
+          square = ((double) (basis+basis2)/2)*height;
      }
 
      @Override
      public void print() {
 
          System.out.println("Shape: Trapezoid");
-         System.out.println("Height" + height);
+         System.out.println("Height: " + height);
          System.out.println("Basis: " + basis);
          System.out.println("Second basis: " + basis2);
 

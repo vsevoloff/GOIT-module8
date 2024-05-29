@@ -10,6 +10,7 @@ public class Rectangle extends Shape {
         }
         this.height = height;
         this.width = width;
+        square = height*width;
     }
 
     @Override
